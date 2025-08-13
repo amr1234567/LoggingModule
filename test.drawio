@@ -1,0 +1,37 @@
+<mxfile host="65bd71144e">
+    <diagram id="Y3JERD123" name="ERD">
+        <mxGraphModel dx="750" dy="576" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Student&lt;br&gt;PK: StudentId&lt;br&gt;Name&lt;br&gt;Age" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="40" width="220" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Teacher&lt;br&gt;PK: TeacherId&lt;br&gt;Name" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="40" width="220" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Subject&lt;br&gt;PK: SubjectId&lt;br&gt;Name&lt;br&gt;FK: TeacherId -&amp;gt; Teacher&lt;br&gt;FK: ClassId -&amp;gt; Class" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="250" width="260" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Class&lt;br&gt;PK: ClassId&lt;br&gt;Name" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="440" width="220" height="120" as="geometry"/>
+                </mxCell>
+				<mxCell id="9" value="StudentSubject&lt;br&gt;PK: StudentId, SubjectId&lt;br&gt;FK: StudentId -&amp;gt; Student&lt;br&gt;FK: SubjectId -&amp;gt; Subject" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+					<mxGeometry x="40" y="250" width="260" height="120" as="geometry"/>
+				</mxCell>
+				<mxCell id="10" value="1:N" style="endArrow=classic;html=1;strokeColor=#6c8ebf;rounded=0;edgeStyle=orthogonalEdgeStyle" parent="1" source="2" target="9" edge="1">
+					<mxGeometry relative="1" as="geometry"/>
+				</mxCell>
+				<mxCell id="11" value="1:N" style="endArrow=classic;html=1;strokeColor=#d6b656;rounded=0;edgeStyle=orthogonalEdgeStyle" parent="1" source="4" target="9" edge="1">
+					<mxGeometry relative="1" as="geometry"/>
+				</mxCell>
+                <mxCell id="7" value="1:N" style="endArrow=classic;html=1;strokeColor=#9673a6;rounded=0;edgeStyle=orthogonalEdgeStyle" parent="1" source="3" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="1:N" style="endArrow=classic;html=1;strokeColor=#82b366;rounded=0;edgeStyle=orthogonalEdgeStyle" parent="1" source="5" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
